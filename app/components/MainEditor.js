@@ -25,35 +25,8 @@ export default function MainEditor() {
         setSelection({ text: selectedText, position });
     }
 
-    // Handle AI edit request
-    // const handleEditRequest = async (type) =>{
-    //     if(!selection) return;
-    //     setModal({ isOpen: true, original: selection.text, suggestion: '', loading: true, range: selection.position.range });
-        
-    //     // Mock AI request
-    //     try{
-    //         await new Promise(resolve => setTimeout(resolve, 1500)) // Simulate API delay
-
-    //         let suggestion = selection.text;
-    //         switch(type){
-    //             case 'shorten':
-    //                 suggestion = selection.text.split(' ').slice(0, Math.max(3, Math.floor(selection.text.split(' ').length / 2))).join(' ') + '...'
-    //                 break
-    //             case 'improve':
-    //                 suggestion = selection.text.charAt(0).toUpperCase() + selection.text.slice(1).replace(/\./g, '!').replace(/\bawesome\b/gi, 'incredible')
-    //                 break
-    //             default:
-    //                 suggestion = selection.text.replace(/\b\w/g, l => l.toUpperCase())
-    //         }
-    //         setModal(prev => ({...prev, suggestion, loading:false}))
-    //     }
-    //     catch(error){
-    //         console.log("Edit request failed: ", error);
-    //         setModal(prev => ({...prev, loading: false}));
-    //     }
-    // }
-
     // -------------
+    // Handle AI edit request
     const handleEditRequest = async (type) => {
   if (!selection) return;
 
@@ -100,8 +73,7 @@ export default function MainEditor() {
         suggestion = selection.text;
     }
 
-    // Simulate delay for smoother UX
-    await new Promise(resolve => setTimeout(resolve, 800));
+    await new Promise(resolve => setTimeout(resolve, 800)); // Simulate API delay
 
     setModal(prev => ({ ...prev, suggestion, loading: false }));
   } catch (error) {
