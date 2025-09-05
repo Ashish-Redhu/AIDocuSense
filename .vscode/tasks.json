@@ -1,0 +1,11 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Install jsPDF and docx",
+			"type": "shell",
+			"command": "npm install jspdf docx",
+			"group": "build"
+		}
+	]
+}

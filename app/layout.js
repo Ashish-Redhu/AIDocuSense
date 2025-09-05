@@ -8,18 +8,8 @@ const epunda = localFont({
       weight: '400',
       style: 'normal',
     },
-    // {
-    //   path: 'fonts/epunda/EpundaSlab-VariableFont_wght.ttf',
-    //   weight: '700',
-    //   style: 'normal',
-    // },
-    // {
-    //   path: 'fonts/epunda/EpundaSlab-Italic-VariableFont_wght.ttf',
-    //   weight: '400',
-    //   style: 'italic',
-    // },
   ],
-  // variable: '--font-epunda-slab',
+
   variable: '--font-libertinus-keyboard',
 })
 
